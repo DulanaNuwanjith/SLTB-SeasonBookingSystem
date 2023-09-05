@@ -1,0 +1,222 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .body-bg {
+            background-color: #9921e8;
+            background-image: linear-gradient(315deg, #0a0536 0%, #8994be 74%);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <div class="flex items-center justify-between px-6 ">
+                <div>
+                    <button>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" class="" alt="..." />
+                    </button>
+                </div>
+                <div class="flex items-center ">
+                    <div>
+                        <button>
+                            <img src="{% static 'app/images/sltblogo.png' %}" class="" alt="..." />
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="{% static 'app/images/loginlogo.png' %}" class="" alt="..." />
+                        </button>
+                    </div>
+                    <div>
+                        <button class="font-sans font-bold text-xl">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="h-12 bg-blue-950 flex items-center justify-between px-6">
+        <!-- Projects link -->
+        <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+            <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#" data-te-nav-link-ref>Home</a>
+        </li>
+        <div class="flex items-center ">
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+                <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#" data-te-nav-link-ref>About us</a>
+            </li>
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+                <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#" data-te-nav-link-ref>Contact Us</a>
+            </li>
+        </div>
+    </div>
+    <section class=" bg-blue-200 min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
+            OUR SERVICES
+        </h2>
+        <div class="mt-12 ml-12 mr-12">
+            <div class="flex items-center flex-wrap mb-8">
+                <div class="w-full md:w-1/2">
+                    <h4 class="text-3xl text-gray-800 font-bold mb-3">SISU SARIYA</h4>
+                    <p class="text-yellow-500 mb-6 font-semibold">BUS SERVICE DEDICATED FOR SCHOOL CHILDREN
+                    </p>
+                    <p class="text-gray-600 mb-8">Launched in 2005, Sisu Sariya is a centralized, reliable and
+                        concessionary bus service combining the services of SLTB depots and registered private bus
+                        service providers. There are at present 778 buses in service. Commencing as a joint effort among
+                        the Ministry of Education, Ministry of Transport, Sri Lanka Police, Sri Lanka Transport Board
+                        and the National Transport Commission, the aim of this project is to provide special school
+                        buses exclusively for uniformed school children and teachers to enable them to attend schools
+                        safely, economically and without physical or mental harassment on travel to and from school.
+                    </p>
+                    <p class="text-yellow-500 mb-6 font-semibold">THE SERVICE
+                    </p>
+                    <p class="text-gray-600 mb-8">Strict safety measures are followed in maintenance and operation of
+                        the buses. With punctuality in mind, the service provides timely travel to school and back. The
+                        bus will arrive at the school 15 minutes before start of school and arrive at school before
+                        closing of school to pickup students. Education is a child’s right. By making available low-cost
+                        transport, the Sisu Sariya Bus Service offers concessionary charges, encouraging parents to send
+                        their children to school, by providing families with economic relief.
+                    </p>
+                    <p class="text-gray-600 mb-3">The Charges for the service will be as following:
+                    </p>
+                    <p class="text-gray-600 mb-2">*Over 12 years : 50% of adult bus fare.
+                    </p>
+                    <p class="text-gray-600 mb-2">*Under 12 years : 25% of adult bus fare
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 ">
+                    <img src="{% static 'app/images/sisu-seriya.jpg' %}" alt="" />
+                </div>
+            </div>
+            <p class="text-yellow-500 mb-4 font-semibold">SERVICE MONITORING
+            </p>
+            <p class="text-gray-600 mb-8">The National Transport Commission considers safety and reliability to be
+                important. Hence strict monitoring of the service is carried out on a continuous basis to check that
+                high standards in quality of service is maintained. For this purpose, for each bus, a free ticket will
+                be issued for a named teacher/senior student, who will monitor services provided. A seven member
+                committee from each school, comprising of the school Principle/Deputy Principle, Teacher, Supervising
+                teachers, Two (2) senior teachers and Two (2) parents of school development committee, will monitor the
+                service and attend to the needs arising for the specific service buses allocated to the school. Payments
+                are made only if busses pass a reliability of at least 90%. The Government has allocated a sum of Rs.240
+                mn for this project as of January 2011.
+            </p>
+            <div class="w-full ">
+                <h4 class="text-3xl text-gray-800 font-bold mb-6 mt-10 ">GEMI SERIYA</h4>
+                <p class="text-gray-600 mb-8">Gami Seriya rural bus service project implemented in 2005 with a view to
+                    improve accessibility of people who living in rural areas in order to fulfill their day today needs.
+                    This project provides reliable and economical passenger transport service to the public who are
+                    affected by lack of transport facilities.
+                    This project identifies the actual uneconomical routes through a formal procedure, and disburses
+                    funds among the service providers of such routes who really provide socially necessary services
+                    during uneconomic times of the day, considering their actual operating losses on uneconomic routes.
+                    Did you know that 80 percent of Sri Lankan’s live in villages? And that it is a national
+                    responsibility to provide opportunity to those in these communities to travel to towns conveniently
+                    more often, and be able to contribute to the country’s economy, constructively? Having recognized
+                    the importance of National Transport in providing such opportunities, and its duty to all such
+                    communities, Gami Sariya, an initiative of the NTC together with the services of SLTB was started in
+                    2008.Gami Sariya hopes to link all those from these communities, with towns by providing
+                    concessionary, comfortable and efficient transport services along the routes considered economically
+                    unattractive.
+                </p>
+                <div class="w-full md:w-1/2">
+                    </p>
+                    <p class="text-yellow-500 mb-6 font-semibold">BENEFITS OF THIS PROGRAMME
+                    </p>
+                    <p class="text-gray-600 mb-2">* Reduction of time and costs of travelling
+                    </p>
+                    <p class="text-gray-600 mb-2">* Ability to transport produce and goods
+                    </p>
+                    <p class="text-gray-600 mb-2">* Comfortable travel for education, health and social needs
+                    </p>
+                    <p class="text-gray-600 mb-6">* Development of roads
+                    </p>
+                </div>
+            </div>
+            <div class="w-full ">
+                <h4 class="text-3xl text-gray-800 font-bold mb-6 mt-10">NISI SERIYA</h4>
+                <p class="text-gray-600 mb-8">Encouraging provision of reliable and regular public bus service during
+                    late night is envisaged under the “Nisi Sariya”. The National Transport Commission has been
+                    assisting 56 identified late night services leaving city centers by reimbursing 50% of the fuel cost
+                    of the journey. Under this programme, the operator has to operate at least 90% of the journey of
+                    particular month for this entitlement. Under the 2nd phase of the project, sixteen (16) services
+                    have been identified and assigned to the SLTB. Presently 58 SLTB Services (Western , Southern and
+                    Uva)
+                </p>
+                <div class="w-full md:w-1/2">
+                    </p>
+                    <p class="text-yellow-500 mb-6 font-semibold">TARGET
+                    </p>
+                    <p class="text-gray-600 mb-6">100 “Nisi Sariya” night services are being planned together with SLTB and private operators in Colombo and its suburbs.
+                    </p>
+                    <p class="text-yellow-500 mb-6 font-semibold">SERVICE MONITORING
+                    </p>
+                    <p class="text-gray-600 mb-20">In ensuring that a service of high standards is provided to you, our valued passengers, especially during night time, NTC mobile inspectors periodically monitor the bus routes to ensure that time tables and standards are met.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <div class="h-9 bg-slate-950 "></div>
+        <div class="bg-slate-950 flex justify-between">
+            <div class="px-20 ">
+                <div class="flex justify-between py-3">
+                    <div>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" alt="" class="px-36">
+                    </div>
+                    <div>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" alt="" class="px-30">
+                    </div>
+                    <div>
+                        <img src="{% static 'app/images/sltblogo.png' %}" alt="" class="px-40">
+                    </div>
+                </div>
+
+                <div class="flex justify-between px-20 ">
+                    <div class="text-center">
+                        <p class="text-white">Lanka Nippon Biz Tech Institute (LNBTI).</p>
+                        <p class="text-white">278, High Level Road, Maharagama,Sri Lanka.</p>
+                        <p class="text-white">+94 77 336 0000 / +94 11 208 8822</p>
+                        <p class="text-white">lnbti.lk</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white">Hands Global Holdings (Pvt) Ltd.</p>
+                        <p class="text-white">No. 21/5, Pagoda Road, Nugegoda.</p>
+                        <p class="text-white">Hotline: 1315</p>
+                        <p class="text-white">info@eseat.lk</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white">Sri Lanka Transport Board</p>
+                        <p class="text-white">No. 200, Kirula Road, Colombo 5</p>
+                        <p class="text-white">+94 (0) 11 7706000 | +94 (0) 11 25811120 - 4</p>
+                        <p class="text-white">+94 (0) 11 2589683 | info@sltb.lk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-12 bg-slate-950 ">
+        </div>
+    </div>
+
+</body>
+
+</html>

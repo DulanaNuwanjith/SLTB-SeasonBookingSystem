@@ -1,0 +1,226 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .body-bg {
+            background-color: #9921e8;
+            background-image: linear-gradient(315deg, #0a0536 0%, #8994be 74%);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <div class="flex items-center justify-between px-6 ">
+                <div>
+                    <button>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" class="" alt="..." />
+                    </button>
+                </div>
+                <div class="flex items-center ">
+                    <div>
+                        <button>
+                            <img src="{% static 'app/images/sltblogo.png' %}" class="" alt="..." />
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="{% static 'app/images/loginlogo.png' %}" class="" alt="..." />
+                        </button>
+                    </div>
+                    <div>
+                        <button class="font-sans font-bold text-xl">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="h-12 bg-blue-950 flex items-center justify-between px-6">
+        <!-- Projects link -->
+        <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+            <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#" data-te-nav-link-ref>Home</a>
+        </li>
+        <div class="flex items-center ">
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline" data-te-nav-item-ref>
+                <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#" data-te-nav-link-ref>About us</a>
+            </li>
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+                <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#" data-te-nav-link-ref>Services</a>
+            </li>
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+                <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#" data-te-nav-link-ref>Contact Us</a>
+            </li>
+        </div>
+    </div>
+    <div class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+        <header class="max-w-lg mx-auto mb-8">
+            <a href="#">
+                <h1 class="text-4xl  font-bold text-white text-center">Profile</h1>
+            </a>
+        </header>
+
+        <div class="h-full ml-12 mr-12 mb-12">
+
+            <div class="border-b-2 block md:flex">
+
+                <div class="w-full md:w-2/5 p-4 sm:p-6 lg:p-8 bg-white shadow-md rounded-xl">
+                    <div class="flex justify-between">
+                        <span class="text-xl font-semibold block">{{student.name}}</span>
+                        <a href="#"
+                            class="-mt-2 text-md font-bold text-white bg-gray-700 rounded-full px-5 py-2 hover:bg-gray-800">Edit</a>
+                    </div>
+
+                    <span class="text-gray-600">This information is secret so be careful</span>
+                    <div class="w-full p-8 mx-2 flex justify-center">
+                        <img id="showImage" class="max-w-xs w-32 items-center border"
+                            src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=200"
+                            alt="">
+                    </div>
+                    <div class="text-center">
+                        <button class="text-blue-700 hover:underline">
+                            Upload Photo
+                        </button>
+                    </div>
+                    <div class="pb-6">
+                        <label for="name" class="font-semibold text-gray-700 block pb-1">Name</label>
+                        <div class="flex">
+                            <input disabled id="username"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                type="text" value="{{student.name}}" />
+                        </div>
+                    </div>
+                    <div class="pb-6">
+                        <label for="name" class="font-semibold text-gray-700 block pb-1">Email</label>
+                        <div class="flex">
+                            <input disabled id="username"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                type="text" value="{{student.email}}" />
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between px-16 mt-6 ">
+                        <button class="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded font-sans">
+                            Back
+                        </button>
+                        <button class="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded font-sans">
+                            Delete 
+                        </button>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-3/5 p-8 bg-white lg:ml-4 shadow-md rounded-xl">
+                    <div class="rounded  shadow p-6">
+                        <div class="pb-6">
+                            <label for="name" class="font-semibold text-gray-700 block pb-1">Date of birth</label>
+                            <div class="flex">
+                                <input disabled id="username"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    type="text" value="{{student.dob}}" />
+                            </div>
+                        </div>
+
+                        <div class="pb-6">
+                            <label for="name" class="font-semibold text-gray-700 block pb-1">School</label>
+                            <div class="flex">
+                                <input disabled id="username"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    type="text" value="{{student.school}}" />
+                            </div>
+                        </div>
+                        <div class="pb-6">
+                            <label for="name" class="font-semibold text-gray-700 block pb-1">Admission No</label>
+                            <div class="flex">
+                                <input disabled id="username"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    type="text" value="{{student.admission_no}}" />
+                            </div>
+                        </div>
+                        <div class="pb-6">
+                            <label for="name" class="font-semibold text-gray-700 block pb-1">Address</label>
+                            <div class="flex">
+                                <input disabled id="username"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                    type="text" value="{{student.address}}" />
+                            </div>
+                        </div>
+                        <div class="pb-4">
+                            <span class="text-gray-600 pt-4 block opacity-70">Personal login information of your
+                                account</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <footer class="max-w-lg mx-auto flex justify-center text-white">
+            <a href="#" class="hover:underline">Contact</a>
+            <span class="mx-3">•</span>
+            <a href="#" class="hover:underline">Privacy</a>
+        </footer>
+    </div>
+    <div>
+        <div class="h-9 bg-slate-950 "></div>
+        <div class="bg-slate-950 flex justify-between">
+            <div class="px-20 ">
+                <div class="flex justify-between py-3">
+                    <div>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" alt="" class="px-36">
+                    </div>
+                    <div>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" alt="" class="px-30">
+                    </div>
+                    <div>
+                        <img src="{% static 'app/images/sltblogo.png' %}" alt="" class="px-40">
+                    </div>
+                </div>
+
+                <div class="flex justify-between px-20 ">
+                    <div class="text-center">
+                        <p class="text-white">Lanka Nippon Biz Tech Institute (LNBTI).</p>
+                        <p class="text-white">278, High Level Road, Maharagama,Sri Lanka.</p>
+                        <p class="text-white">+94 77 336 0000 / +94 11 208 8822</p>
+                        <p class="text-white">lnbti.lk</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white">Hands Global Holdings (Pvt) Ltd.</p>
+                        <p class="text-white">No. 21/5, Pagoda Road, Nugegoda.</p>
+                        <p class="text-white">Hotline: 1315</p>
+                        <p class="text-white">info@eseat.lk</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white">Sri Lanka Transport Board</p>
+                        <p class="text-white">No. 200, Kirula Road, Colombo 5</p>
+                        <p class="text-white">+94 (0) 11 7706000 | +94 (0) 11 25811120 - 4</p>
+                        <p class="text-white">+94 (0) 11 2589683 | info@sltb.lk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-12 bg-slate-950 ">
+        </div>
+    </div>
+
+</body>
+
+</html>

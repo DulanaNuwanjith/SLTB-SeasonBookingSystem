@@ -1,0 +1,176 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% tailwind_css %}
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .body-bg {
+            background-color: #9921e8;
+            background-image: linear-gradient(315deg, #0a0536 0%, #8994be 74%);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <div class="flex items-center justify-between px-6 ">
+                <div >
+                    <button>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" class = ""  alt = "..." />
+                    </button>
+                </div>
+                <div class="flex items-center ">
+                    <div>
+                        <button>
+                            <img src="{% static 'app/images/sltblogo.png' %}" class = "" alt = "..." />
+                        </button>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="{% static 'app/images/loginlogo.png' %}" class = "" alt = "..." />
+                        </button>
+                    </div> 
+                    <div>
+                        <button class="font-sans font-bold text-xl">
+                            Login
+                        </button>
+                    </div>   
+                </div>
+            </div>
+        </nav> 
+    </div>
+    <div class="h-12 bg-blue-950 flex items-center justify-between px-6">
+        <!-- Projects link -->
+        <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+            <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#" data-te-nav-link-ref>Home</a>
+        </li>
+        <div class="flex items-center ">
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+                <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#" data-te-nav-link-ref>About us</a>
+            </li>
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline " data-te-nav-item-ref>
+                <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#" data-te-nav-link-ref>Services</a>
+            </li>
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pr-2 flex items-center hover:underline" data-te-nav-item-ref>
+                <a class="text-white hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#" data-te-nav-link-ref>Contact Us</a>
+            </li>
+        </div>
+    </div>
+    <div class="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+        <header class="max-w-lg mx-auto">
+            <a href="#">
+                <h1 class="text-4xl font-bold text-white text-center">GoSeason</h1>
+            </a>
+        </header>
+    
+        <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+            <section>
+                <h3 class="font-bold text-2xl text-blue-950">Welcome to GoSeason</h3>
+                <p class="text-gray-600 pt-2">Create your account.</p>
+            </section>
+    
+            <section class="mt-10">
+                <form class="flex flex-col" method="POST" action="#">
+                    <div class="mb-6 pt-3 rounded bg-gray-200">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Email</label>
+                        <input type="text" id="email" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
+                    </div>
+                    <div class="mb-6 pt-3 rounded bg-gray-200">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password">Password</label>
+                        <input type="password" id="password" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3">
+                    </div>
+                    <button class="font-sans bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" type="submit">Back</button>
+                    <div class="h-3"></div>
+                    <button class="font-sans bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" type="submit">Sign Up</button>
+                </form>
+            </section>
+        </main>
+    
+        <div class="max-w-lg mx-auto text-center mt-12 mb-6">
+            <p class="text-white">Do you have an account? <a href="#" class="font-bold hover:underline">Log In</a>.</p>
+        </div>
+    
+        <footer class="max-w-lg mx-auto flex justify-center text-white">
+            <a href="#" class="hover:underline">Contact</a>
+            <span class="mx-3">•</span>
+            <a href="#" class="hover:underline">Privacy</a>
+        </footer>
+    </div>
+    <div>
+        <div class="h-9 bg-slate-950 "></div>
+        <div class="bg-slate-950 flex justify-between">
+            <div class="px-20 ">
+                <div class="flex justify-between py-3">
+                    <div>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" alt="" class="px-36">
+                    </div>
+                    <div>
+                        <img src="{% static 'app/images/sltbeseat.png' %}" alt="" class="px-30">
+                    </div>
+                    <div>
+                        <img src="{% static 'app/images/sltblogo.png' %}"  alt="" class="px-40" >
+                    </div>
+                </div>
+                
+                <div class="flex justify-between px-20 ">
+                    <div class="text-center">
+                        <p class="text-white">Lanka Nippon Biz Tech Institute (LNBTI).</p>
+                        <p class="text-white">278, High Level Road, Maharagama,Sri Lanka.</p>
+                        <p class="text-white">+94 77 336 0000 / +94 11 208 8822</p>
+                        <p class="text-white">lnbti.lk</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white">Hands Global Holdings (Pvt) Ltd.</p>
+                        <p class="text-white">No. 21/5, Pagoda Road, Nugegoda.</p>
+                        <p class="text-white">Hotline: 1315</p>
+                        <p class="text-white">info@eseat.lk</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-white">Sri Lanka Transport Board</p>
+                        <p class="text-white">No. 200, Kirula Road, Colombo 5</p>
+                        <p class="text-white">+94 (0) 11 7706000 | +94 (0) 11 25811120 - 4</p>
+                        <p class="text-white">+94 (0) 11 2589683 | info@sltb.lk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-12 bg-slate-950 ">   
+        </div>
+    </div>
+    
+</body>
+</html>
+<h1>Student Registration</h1>
+<form method="post">
+    {%csrf_token%}
+    {{form}}
+    <input type="submit" name="create" value="Create">
+</form>
+
+<ul>
+    <table border ="1">
+        <tr>
+            <th>{{student.name}}</th>
+            <th>{{student.school}}</th>
+            <th>{{student.admission_no}}</th>
+            <th>{{student.dob}}</th>
+            <th>{{student.email}}</th>
+            <th>{{student.address}}</th>
+        </tr>
+    </table>
+</ul>
